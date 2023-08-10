@@ -2,7 +2,7 @@
 ========================================================================== */
 footer {
   text-align: center;
-  background-color: var(--footer-bg-color);
+  background-color: #f2f0e9;
   padding: 2rem 0;
 }
 
@@ -14,7 +14,7 @@ footer {
   align-items: center;
   margin: 0 auto;
   padding: 2rem 0;
-  max-width: var(--max-innertext-width);
+  max-width: 1024px;
 }
 
 .logo-gallery img {

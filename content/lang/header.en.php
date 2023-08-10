@@ -23,13 +23,6 @@ $LANG['H_PROJECT_2'] = 'Checklist Project 2';
 
 $LANG['H_DYN_LISTS'] = 'Dynamic Species List';
 $LANG['H_DYN_KEYS'] = 'Identification Keys';
-$LANG['H_AMPHIBIA'] = 'Amphibians';
-$LANG['H_AVES'] = 'Birds';
-$LANG['H_FISH'] = 'Fish';
-$LANG['H_INVERTEBRATES'] = 'Invertebrates';
-$LANG['H_MAMMALIA'] = 'Mammals';
-$LANG['H_PLANTA'] = 'Plants';
-$LANG['H_REPTILIA'] = 'Reptiles';
 
 $LANG['H_MORE_INFO'] = 'More Information';
 $LANG['H_ABOUT_PROJECT'] = 'About Project';

@@ -23,13 +23,6 @@ $LANG['H_PROJECT_2'] = 'Proyecto 2';
 
 $LANG['H_DYN_LISTS'] = 'Listados Din&aacute;micos';
 $LANG['H_DYN_KEYS'] = 'Claves de identificación';
-$LANG['H_AMPHIBIA'] = 'Anfibios';
-$LANG['H_AVES'] = 'Aves';
-$LANG['H_FISH'] = 'Peces';
-$LANG['H_INVERTEBRATES'] = 'Invertebrados';
-$LANG['H_MAMMALIA'] = 'Mamíferos';
-$LANG['H_PLANTA'] = 'Plantas';
-$LANG['H_REPTILIA'] = 'Reptiles';
 
 $LANG['H_MORE_INFO'] = 'M&aacute;s Informaci&oacute;n';
 $LANG['H_ABOUT_PROJECT'] = 'Información sobre el Proyecto';
