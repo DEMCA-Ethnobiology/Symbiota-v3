@@ -6,7 +6,7 @@
  ========================================================================== */
 @import 'base.css';
 @import 'header.css';
-@import 'footer.css';
+@import 'footer.css?ver=1';
 
 /* Global styles
  ========================================================================== */
@@ -93,7 +93,7 @@ hr {
 #innertext {
 	margin: 0 auto;
 	padding: 3rem 0;
-	background-color: #fafafa;
+	background-color: #ffffff;
 	width: 100%;
 }
 
