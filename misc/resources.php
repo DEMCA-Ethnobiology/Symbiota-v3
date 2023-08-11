@@ -1,41 +1,35 @@
 <?php
-include_once("config/symbini.php");
-header("Content-Type: text/html; charset=".$CHARSET);
+include_once('../config/symbini.php');
+header('Content-Type: text/html; charset='.$CHARSET);
 ?>
 <html>
 <head>
-	<meta http-equiv="X-Frame-Options" content="deny">
-	<title><?php echo $DEFAULT_TITLE; ?> Home</title>
-	<link href="css/base.css?<?php echo $CSS_VERSION; ?>" type="text/css" rel="stylesheet" />
-	<link href="css/main.css?<?php echo $CSS_VERSION; ?>" type="text/css" rel="stylesheet" />
-	<script type="text/javascript">
-		<?php include_once($SERVER_ROOT.'/config/googleanalytics.php'); ?>
-	</script>
+	<title><?php echo $DEFAULT_TITLE; ?> - Resources</title>
+	<?php
+	include_once($SERVER_ROOT.'/includes/head.php');
+	include_once($SERVER_ROOT.'/includes/googleanalytics.php');
+	?>
 </head>
 <body>
 	<?php
-	include($SERVER_ROOT.'/header.php');
-	?> 
+	include($SERVER_ROOT.'/includes/header.php');
+	?>
 	<!-- This is inner text! -->
-	<div  id="innertext">
+	<div  id="innertext" style="height:400px">
 		<h1></h1>
+		<b>Resources</b><br><br>
+		Under Development
 
-		
-			<b>Resources</b><br><br>
-Under Development
-			
-Online floras
+		Online floras
 
-Books
+		Books
 
-Web sites
+		Web sites
 
-Herbarium databases
-		</div>
+		Herbarium databases
 	</div>
-
 	<?php
-	include($SERVER_ROOT.'/footer.php');
-	?> 
+	include($SERVER_ROOT.'/includes/footer.php');
+	?>
 </body>
 </html>

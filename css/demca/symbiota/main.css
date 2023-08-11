@@ -92,7 +92,7 @@ hr {
 
 #innertext {
 	margin: 0 auto;
-	padding: 3rem 0;
+	padding: 2rem 3rem;
 	background-color: #ffffff;
 	width: 100%;
 }
@@ -100,6 +100,13 @@ hr {
 #innertext p {
 	color: #000000;
 	line-height: 1.5;
+}
+
+#popup-innertext {
+	width: 100%;
+	background-color: #ffffff;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .navpath {

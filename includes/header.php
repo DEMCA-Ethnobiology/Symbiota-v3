@@ -95,13 +95,13 @@ else include_once($SERVER_ROOT.'/content/lang/header.'.$LANG_TAG.'.php');
                         </ul>
                     </li>
                     <li>
-                        <a href="<?= $CLIENT_ROOT; ?>/userguide.php" >User guide</a>
+                        <a href="<?= $CLIENT_ROOT; ?>/misc/userguide.php" >User guide</a>
                     </li>
                     <li>
-                        <a href="<?= $CLIENT_ROOT; ?>/resources.php" >Resources</a>
+                        <a href="<?= $CLIENT_ROOT; ?>/misc/resources.php" >Resources</a>
                     </li>
                     <li>
-                        <a href="<?= $CLIENT_ROOT; ?>/acknowledgements.php" >Acknowledgements</a>
+                        <a href="<?= $CLIENT_ROOT; ?>/misc/acknowledgements.php" >Acknowledgements</a>
                     </li>
 					<li>
 						<a href='<?= $CLIENT_ROOT; ?>/sitemap.php'>
