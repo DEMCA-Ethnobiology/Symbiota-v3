@@ -14,13 +14,13 @@ if(!is_numeric($collid)) $collid = 0;
 if(!is_numeric($mediaid)) $mediaid = 0;
 if(!is_numeric($tabIndex)) $tabIndex = 0;
 
-$isAdmin = false;
+$isEditor = false;
 if($SYMB_UID){
 	if($IS_ADMIN){
-		$isAdmin = true;
+		$isEditor = true;
 	}
 	elseif($collid && ((array_key_exists("CollAdmin",$USER_RIGHTS) && in_array($collid,$USER_RIGHTS["CollAdmin"])) || (array_key_exists("CollEditor",$USER_RIGHTS) && in_array($collid,$USER_RIGHTS["CollEditor"])))){
-		$isAdmin = true;
+		$isEditor = true;
 	}
 }
 
@@ -314,7 +314,7 @@ if($xml){
 		});
 
 		function alertMLoadErr(){
-			document.getElementById("innertext").innerHTML = "<h1>Failed to open media file</h1>";
+			//document.getElementById("innertext").innerHTML = "<h1>Failed to open media file</h1>";
 		}
 
 		function setColors(){
@@ -622,8 +622,8 @@ $displayLeftMenu = false;
 include($SERVER_ROOT.'/includes/header.php');
 echo '<div class="navpath">';
 echo '<a href="../../index.php">Home</a> &gt;&gt; ';
-if($isAdmin && $collid) echo '<a href="../../collections/misc/collprofiles.php?collid='.$collid.'&emode=1">Collection Control Panel</a> &gt;&gt; ';
-if($isAdmin) echo '<a href="index.php?collid='.$collid.'">Manage EAF Files</a> &gt;&gt; ';
+if($isEditor && $collid) echo '<a href="../../collections/misc/collprofiles.php?collid='.$collid.'&emode=1">Collection Control Panel</a> &gt;&gt; ';
+if($isEditor) echo '<a href="index.php?collid='.$collid.'">Manage EAF Files</a> &gt;&gt; ';
 else echo '<a href="index.php?collid='.$collid.'">View EAF Files</a> &gt;&gt; ';
 echo '<b>'.$player_title.' EAF Detail</b>';
 echo '</div>';

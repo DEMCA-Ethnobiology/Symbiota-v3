@@ -58,14 +58,14 @@ header('Content-Type: text/html; charset=' . $CHARSET);
 		        </p>
 		        <p>
 		            Development of the DEMCA data portal has been supported by the following programs:
-		            <a href="http://www.neh.gov/divisions/odh/grant-news/the-sug-program-no-more-please-welcome-digital-humanities-advancement-grants">
+		            <a href="http://www.neh.gov/divisions/odh/grant-news/the-sug-program-no-more-please-welcome-digital-humanities-advancement-grants" target="_blank">
 		            National Endowment for the Humanities Digital Humanities Start-up grants</a>,
 		            <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=12816">National Science Foundation, Documentation of
-		            Endangered Languages Program</a>, <a href="http://www.neh.gov/divisions/preservation/">National Endowment for the Humanities
-		            Division of Preservation and Access</a>, and the <a href="http://www.eldp.net/">Endangered Language Documentation Programme</a>.
-		            Software is based on <a href="http://symbiota.org/docs/">Symbiota</a>, data and web design by
-		            <a href="http://www.civicactions.com/">Civic Actions</a> (for more details on specific awards,
-		            see <a href="acknowledgements.php">Acknowledgements</a>. Usage Policy. Copyright © 2016.
+		            Endangered Languages Program</a>, <a href="http://www.neh.gov/divisions/preservation/" target="_blank">National Endowment for the Humanities
+		            Division of Preservation and Access</a>, and the <a href="http://www.eldp.net/" target="_blank">Endangered Language Documentation Programme</a>.
+		            Software is based on <a href="http://symbiota.org" target="_blank">Symbiota</a>, data and web design by
+		            <a href="http://www.civicactions.com" target="_blank">Civic Actions</a> (for more details on specific awards,
+		            see <a href="misc/acknowledgements.php">Acknowledgements</a>. Usage Policy. Copyright © 2016.
 		        </p>
 		        <p>
 		            How to cite: [Authors], [Collection name] accessed at DEMCA: Documenting the Ethnobiology of Mexico and Central America (Jonathan
@@ -98,14 +98,14 @@ header('Content-Type: text/html; charset=' . $CHARSET);
 		        </p>
 		        <p>
 		            Development of the DEMCA data portal has been supported by the following programs:
-		            <a href="http://www.neh.gov/divisions/odh/grant-news/the-sug-program-no-more-please-welcome-digital-humanities-advancement-grants">
+		            <a href="http://www.neh.gov/divisions/odh/grant-news/the-sug-program-no-more-please-welcome-digital-humanities-advancement-grants" target="_blank">
 		            National Endowment for the Humanities Digital Humanities Start-up grants</a>,
 		            <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=12816">National Science Foundation, Documentation of
-		            Endangered Languages Program</a>, <a href="http://www.neh.gov/divisions/preservation/">National Endowment for the Humanities
-		            Division of Preservation and Access</a>, and the <a href="http://www.eldp.net/">Endangered Language Documentation Programme</a>.
-		            Software is based on <a href="http://symbiota.org/docs/">Symbiota</a>, data and web design by
-		            <a href="http://www.civicactions.com/">Civic Actions</a> (for more details on specific awards,
-		            see <a href="acknowledgements.php">Acknowledgements</a>. Usage Policy. Copyright © 2016.
+		            Endangered Languages Program</a>, <a href="http://www.neh.gov/divisions/preservation/" target="_blank">National Endowment for the Humanities
+		            Division of Preservation and Access</a>, and the <a href="http://www.eldp.net/" target="_blank">Endangered Language Documentation Programme</a>.
+		            Software is based on <a href="http://symbiota.org" target="_blank">Symbiota</a>, data and web design by
+		            <a href="http://www.civicactions.com" target="_blank">Civic Actions</a> (for more details on specific awards,
+		            see <a href="misc/acknowledgements.php">Acknowledgements</a>. Usage Policy. Copyright © 2016.
 		        </p>
 		        <p>
 		            How to cite: [Authors], [Collection name] accessed at DEMCA: Documenting the Ethnobiology of Mexico and Central America (Jonathan

@@ -78,7 +78,7 @@ else include_once($SERVER_ROOT.'/content/lang/header.'.$LANG_TAG.'.php');
                         <a href="<?= $CLIENT_ROOT; ?>/projects/index.php"><?= $LANG['H_INVENTORIES'] ?></a>
                         <ul>
                             <li>
-                                <a href="<?= $CLIENT_ROOT; ?>/checklists/checklist.php?cl=1" >Flora of Sierra Nororiental de Puebla</a>
+                                <a href="<?= $CLIENT_ROOT; ?>/projects/index.php?pid=2" >Flora of Nahuat Communities</a>
                             </li>
 
                         </ul>

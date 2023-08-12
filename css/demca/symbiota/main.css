@@ -22,9 +22,8 @@ body {
 	background-color: #465A91;
 	color: #000000;
 	-webkit-text-size-adjust: 100%;
-	font-size: 1.2rem;
 	font-weight: 400;
-	font-family: 'Roboto', sans-serif;
+	font-family: Verdana, Geneva, sans-serif;
 }
 
 h1,
@@ -33,23 +32,23 @@ h3,
 h4 {
 	color: #1b3d2f;
 	font-weight: 700;
-	font-family: 'Roboto', sans-serif;
+	font-family: Verdana, Geneva, sans-serif;
 }
 
 h1 {
-	font-size: 3rem;
-}
-
-h2 {
-	font-size: 2.5rem;
-}
-
-h3 {
 	font-size: 2rem;
 }
 
+h2 {
+	font-size: 1.5rem;
+}
+
+h3 {
+	font-size: 1.4rem;
+}
+
 h4 {
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 }
 
 p {
@@ -60,11 +59,13 @@ a {
 	transition: all 0.2s ease-in-out;
 	color: #126c00;
 	font-weight: 600;
+	text-decoration: none;
 }
 
 a:hover {
-	color: #B9D432;
+	color: #178700;
 	cursor: pointer;
+	text-decoration: underline;
 }
 
 button {
@@ -87,10 +88,11 @@ button:hover {
 }
 
 hr {
-	border: 1px solid #B9D432;
+	border: 1px solid #465A91;
 }
 
 #innertext {
+	font-size: 14px;
 	margin: 0 auto;
 	padding: 2rem 3rem;
 	background-color: #ffffff;
@@ -125,7 +127,7 @@ hr {
 .ui-widget textarea,
 .ui-widget button,
 .ui-widget-content a {
-	font-family: 'Roboto', sans-serif;
+	font-family: Verdana, Geneva, sans-serif;
 }
 
 #maps.ui-widget-content button a {
@@ -142,7 +144,7 @@ hr {
 }
 
 #tabs {
-	font-family: 'Roboto', sans-serif;
+	font-family: Verdana, Geneva, sans-serif;
 }
 
 #tabs div:first-child {
@@ -155,7 +157,7 @@ hr {
 }
 
 #tabs a:hover {
-	color: #B9D432;
+	color: #178700;
 }
 
 #tabs table {
