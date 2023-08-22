@@ -46,66 +46,66 @@ else include_once($SERVER_ROOT.'/content/lang/header.'.$LANG_TAG.'.php');
 				<ul class="menu">
 					<li>
 						<a href="<?= $CLIENT_ROOT; ?>/index.php">
-							<?= (isset($LANG['H_HOME'])?$LANG['H_HOME']:'Home'); ?>
+							<?= $LANG['H_HOME']; ?>
 						</a>
 					</li>
-                    <li>
-                        <a href="<?= $CLIENT_ROOT; ?>/collections/index.php"><?= $LANG['H_SEARCH'] ?></a>
-                        <ul>
-                            <li>
-                                <a href="<?= $CLIENT_ROOT; ?>/collections/index.php" ><?= $LANG['H_COLLECTIONS'] ?></a>
-                            </li>
-                            <li>
-                                <a href="<?= $CLIENT_ROOT; ?>/collections/map/index.php" target="_blank"><?= $LANG['H_MAP_SEARCH'] ?></a>
-                            </li>
-                        </ul>
-                    </li>
-                                        <li>
-                        <a href="<?= $CLIENT_ROOT; ?>/ethno/eaf/index.php" >Multimedia</a>
-                    </li>
-                    <li>
-                        <a href="#"><?= $LANG['H_IMAGES'] ?></a>
-                        <ul>
-                            <li>
-                                <a href="<?= $CLIENT_ROOT; ?>/imagelib/index.php" ><?= $LANG['H_IMAGE_BROWSER'] ?></a>
-                            </li>
-                            <li>
-                                <a href="<?= $CLIENT_ROOT; ?>/imagelib/search.php" ><?= $LANG['H_IMAGE_SEARCH'] ?></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="<?= $CLIENT_ROOT; ?>/projects/index.php"><?= $LANG['H_INVENTORIES'] ?></a>
-                        <ul>
-                            <li>
-                                <a href="<?= $CLIENT_ROOT; ?>/projects/index.php?pid=2" >Flora of Nahuat Communities</a>
-                            </li>
+					<li>
+						<a href="<?= $CLIENT_ROOT; ?>/collections/index.php"><?= $LANG['H_SEARCH'] ?></a>
+						<ul>
+							<li>
+								<a href="<?= $CLIENT_ROOT; ?>/collections/index.php" ><?= $LANG['H_COLLECTIONS'] ?></a>
+							</li>
+							<li>
+								<a href="<?= $CLIENT_ROOT; ?>/collections/map/index.php" target="_blank"><?= $LANG['H_MAP_SEARCH'] ?></a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="<?= $CLIENT_ROOT; ?>/ethno/eaf/index.php" >Multimedia</a>
+					</li>
+					<li>
+						<a href="#"><?= $LANG['H_IMAGES'] ?></a>
+						<ul>
+							<li>
+								<a href="<?= $CLIENT_ROOT; ?>/imagelib/index.php" ><?= $LANG['H_IMAGE_BROWSER'] ?></a>
+							</li>
+							<li>
+								<a href="<?= $CLIENT_ROOT; ?>/imagelib/search.php" ><?= $LANG['H_IMAGE_SEARCH'] ?></a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="<?= $CLIENT_ROOT; ?>/projects/index.php?pid=2"><?= $LANG['H_INVENTORIES'] ?></a>
+						<ul>
+							<li>
+								<a href="<?= $CLIENT_ROOT; ?>/projects/index.php?pid=2" >Flora of Nahuat Communities</a>
+							</li>
 
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" >Tools</a>
-                        <ul>
-                            <li>
-                                <a href="<?= $CLIENT_ROOT; ?>/checklists/dynamicmap.php?interface=checklist" >Dynamic checklist</a>
-                            </li>
-                            <li>
-                                <a href="<?= $CLIENT_ROOT; ?>/checklists/dynamicmap.php?interface=key" >Dynamic key</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="<?= $CLIENT_ROOT; ?>/misc/userguide.php" >User guide</a>
-                    </li>
-                    <li>
-                        <a href="<?= $CLIENT_ROOT; ?>/misc/resources.php" >Resources</a>
-                    </li>
-                    <li>
-                        <a href="<?= $CLIENT_ROOT; ?>/misc/acknowledgements.php" >Acknowledgements</a>
-                    </li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" ><?= $LANG['H_TOOLS']; ?></a>
+						<ul>
+							<li>
+								<a href="<?= $CLIENT_ROOT; ?>/checklists/dynamicmap.php?interface=checklist"><?= $LANG['H_DYN_LISTS']; ?></a>
+							</li>
+							<li>
+								<a href="<?= $CLIENT_ROOT; ?>/checklists/dynamicmap.php?interface=key" ><?= $LANG['H_DYN_KEYS']; ?></a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="<?= $CLIENT_ROOT; ?>/misc/userguide.php" ><?= $LANG['H_USER_GUIDE']; ?></a>
+					</li>
+					<li>
+						<a href="<?= $CLIENT_ROOT; ?>/misc/resources.php" ><?= $LANG['H_RESOURCES']; ?></a>
+					</li>
+					<li>
+						<a href="<?= $CLIENT_ROOT; ?>/misc/acknowledgements.php" ><?= $LANG['H_ACKNOWLEDGEMENTS']; ?></a>
+					</li>
 					<li>
 						<a href='<?= $CLIENT_ROOT; ?>/sitemap.php'>
-							<?= (isset($LANG['H_SITEMAP'])?$LANG['H_SITEMAP']:'Sitemap'); ?>
+							<?= $LANG['H_SITEMAP']; ?>
 						</a>
 					</li>
 				</ul>
