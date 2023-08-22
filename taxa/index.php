@@ -54,7 +54,7 @@ if($SYMB_UID){
 	<title><?php echo $DEFAULT_TITLE." - ".$taxonManager->getTaxonName(); ?></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $CHARSET; ?>"/>
 	<link href="<?php echo $CSS_BASE_PATH; ?>/jquery-ui.css" type="text/css" rel="stylesheet">
-	<link href="<?php echo $CSS_BASE_PATH; ?>/symbiota/taxa/index.css" type="text/css" rel="stylesheet" />
+	<link href="<?php echo $CSS_BASE_PATH; ?>/symbiota/taxa/index.css?ver=1" type="text/css" rel="stylesheet" />
 	<link href="<?php echo $CSS_BASE_PATH; ?>/symbiota/taxa/traitplot.css" type="text/css" rel="stylesheet" >
 	<?php
 	include_once($SERVER_ROOT.'/includes/head.php');

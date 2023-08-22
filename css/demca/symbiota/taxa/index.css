@@ -4,6 +4,7 @@
 	margin-top: 15px;
 	margin-left: auto;
 	margin-right: auto;
+	font-size: 12px;
 }
 
 #toprow{
@@ -274,9 +275,14 @@ fieldset legend{
 	padding-right: 0em;
 }
 
+.ui-tabs-anchor{
+	font-weight: normal;
+}
+
 .sptab{
-	height:		330px;
-	overflow: 	auto;
+	height: 330px;
+	overflow: auto;
+	padding: 10px;
 }
 
 .spptab{

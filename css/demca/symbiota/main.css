@@ -22,8 +22,8 @@ body {
 	background-color: #465A91;
 	color: #000000;
 	-webkit-text-size-adjust: 100%;
-	font-weight: 400;
-	font-family: Verdana, Geneva, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
 }
 
 h1,
@@ -105,6 +105,7 @@ hr {
 }
 
 #popup-innertext {
+	font-size: 14px;
 	width: 100%;
 	background-color: #ffffff;
 	margin-left: auto;
@@ -165,7 +166,6 @@ hr {
 }
 
 .ui-tabs .ui-tabs-panel {
-	padding: 10px 4px;
 }
 
 /* styled table */
