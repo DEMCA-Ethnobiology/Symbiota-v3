@@ -12,5 +12,8 @@
 
 <!-- Symbiota styles -->
 <link href="<?php echo $CSS_BASE_PATH; ?>/symbiota/normalize.slim.css" type="text/css" rel="stylesheet">
-<link href="<?php echo $CSS_BASE_PATH; ?>/symbiota/main.css?ver=3" type="text/css" rel="stylesheet">
+<link href="<?php echo $CSS_BASE_PATH; ?>/symbiota/base.css?ver=1" type="text/css" rel="stylesheet">
+<link href="<?php echo $CSS_BASE_PATH; ?>/symbiota/main.css?ver=4" type="text/css" rel="stylesheet">
+<link href="<?php echo $CSS_BASE_PATH; ?>/symbiota/header.css" type="text/css" rel="stylesheet">
+<link href="<?php echo $CSS_BASE_PATH; ?>/symbiota/footer.css" type="text/css" rel="stylesheet">
 <script src="<?php echo $CLIENT_ROOT; ?>/js/symb/lang.js" type="text/javascript"></script>

@@ -2,12 +2,6 @@
 	========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-/* Global variables and components
- ========================================================================== */
-@import 'base.css';
-@import 'header.css';
-@import 'footer.css?ver=1';
-
 /* Global styles
  ========================================================================== */
 html {
