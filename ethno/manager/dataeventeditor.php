@@ -136,12 +136,9 @@ if(!$occId && $dataEventDetailArr['occid']){
 							var reqTerm = request.term;
 							reqTerm = reqTerm.split( /,\s*/ );
 							reqTerm = reqTerm.pop();
-							$.getJSON( "../../webservices/autofillsciname.php", {
-								term: reqTerm,
-								hideauth: true,
-								limit: 10
-							}, response );
+							$.getJSON( "<?php echo $CLIENT_ROOT; ?>/rpc/taxasuggest.php", { term: reqTerm }, response );
 						},
+						autoFocus: true,
 						focus: function() {
 							return false;
 						},

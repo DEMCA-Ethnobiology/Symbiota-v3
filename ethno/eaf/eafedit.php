@@ -129,12 +129,9 @@ if($xml){
 						var reqTerm = request.term;
 						reqTerm = reqTerm.split( /,\s*/ );
 						reqTerm = reqTerm.pop();
-						$.getJSON( "../../webservices/autofillsciname.php", {
-							term: reqTerm,
-							hideauth: true,
-							limit: 5
-						}, response );
+						$.getJSON( "<?php echo $CLIENT_ROOT; ?>/rpc/taxasuggest.php", { term: reqTerm }, response );
 					},
+					autoFocus: true,
 					focus: function() {
 						// prevent value inserted on focus
 						return false;

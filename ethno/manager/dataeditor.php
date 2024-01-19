@@ -135,15 +135,12 @@ if($dataArr["occid"]){
 							var reqTerm = request.term;
 							reqTerm = reqTerm.split( /,\s*/ );
 							reqTerm = reqTerm.pop();
-							$.getJSON( "../../webservices/autofillsciname.php", {
-								term: reqTerm,
-								hideauth: true,
-								limit: 10
-							}, response );
+							$.getJSON( "<?php echo $CLIENT_ROOT; ?>/rpc/taxasuggest.php", { term: reqTerm }, response );
 						},
 						focus: function() {
 							return false;
 						},
+						autoFocus: true,
 						select: function( event, ui ) {
 							var terms = this.value.split( /,\s*/ );
 							terms.pop();
