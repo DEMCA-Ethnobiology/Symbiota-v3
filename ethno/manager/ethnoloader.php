@@ -87,7 +87,7 @@ include($SERVER_ROOT.'/includes/header.php');
 
 echo '<div class="navpath">';
 echo '<a href="../../index.php">Home</a> &gt;&gt; ';
-echo '<a href="../../collections/misc/collprofiles.php?collid='.$collId.'">Collection Control Panel</a> &gt;&gt; ';
+echo '<a href="../../collections/misc/collprofiles.php?collid='.$collId.'&emode=1">Collection Control Panel</a> &gt;&gt; ';
 echo '<b>Upload Ethnobiological Data</b>';
 echo '</div>';
 

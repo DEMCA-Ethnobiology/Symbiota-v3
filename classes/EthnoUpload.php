@@ -1,25 +1,24 @@
 <?php
-include_once($serverRoot.'/config/dbconnection.php');
+include_once($SERVER_ROOT . '/config/dbconnection.php');
 
 class EthnoUpload{
-	
+
 	private $conn;
     private $collId = 0;
 	private $uploadFileName;
 	private $uploadTargetPath;
 	private $statArr = array();
-	
+
 	private $verboseMode = 1;
 	private $logFH;
 	private $errorStr = '';
-	
+
 	public function __construct() {
 		$this->conn = MySQLiConnectionFactory::getCon('write');
  		// $this->setUploadTargetPath();
         $this->uploadTargetPath = $GLOBALS['SERVER_ROOT'].(substr($GLOBALS['SERVER_ROOT'],-1) != '/'?'/':'').'temp/data/';
  		set_time_limit(3000);
 		ini_set('max_input_time',120);
-  		ini_set('auto_detect_line_endings', true);
 	}
 
 	public function __destruct(){
@@ -30,7 +29,7 @@ class EthnoUpload{
 			fclose($this->logFH);
 		}
 	}
-	
+
 	public function setUploadFile(){
 		if(array_key_exists('uploadfile',$_FILES)){
 			$inFileName = basename($_FILES['uploadfile']['name']);
@@ -39,14 +38,16 @@ class EthnoUpload{
             $this->uploadFileName = $fileName.'.'.$ext;
             move_uploaded_file($_FILES['uploadfile']['tmp_name'], $this->uploadTargetPath.$this->uploadFileName);
 		}
-		if(file_exists($this->uploadTargetPath.$this->uploadFileName) && substr($this->uploadFileName,-4) === '.zip'){
-			$zip = new ZipArchive;
-			$zip->open($this->uploadTargetPath.$this->uploadFileName);
-			$zipFile = $this->uploadTargetPath.$this->uploadFileName;
-			$this->uploadFileName = $zip->getNameIndex(0);
-			$zip->extractTo($this->uploadTargetPath);
-			$zip->close();
-			unlink($zipFile);
+		elseif($this->uploadFileName){
+			if(file_exists($this->uploadTargetPath.$this->uploadFileName) && substr($this->uploadFileName,-4) === '.zip'){
+				$zip = new ZipArchive;
+				$zip->open($this->uploadTargetPath.$this->uploadFileName);
+				$zipFile = $this->uploadTargetPath.$this->uploadFileName;
+				$this->uploadFileName = $zip->getNameIndex(0);
+				$zip->extractTo($this->uploadTargetPath);
+				$zip->close();
+				unlink($zipFile);
+			}
 		}
 	}
 
@@ -377,7 +378,7 @@ class EthnoUpload{
             $this->outputMsg('ERROR: '.$this->conn->error,1);
         }
     }
-	
+
 	public function analysisSynopticUpload(){
 		$sql1 = 'SELECT count(*) as cnt FROM uploadethnodataevent WHERE collid = '.$this->collId.' ';
 		$rs1 = $this->conn->query($sql1);
@@ -421,7 +422,7 @@ class EthnoUpload{
 
 	public function transferSynopticUpload(){
 		$this->outputMsg('Starting data transfer...');
-		
+
 		$this->outputMsg('Updating existing records... ');
         $sql = 'UPDATE ethnodataevent AS de LEFT JOIN uploadethnodataevent AS ue ON de.etheventid = ue.etheventid '.
             'SET de.occid = ue.occid, de.ethComID = ue.ethComID, de.datasource = ue.datasource, de.namedatadiscussion = ue.namedatadiscussion, '.
@@ -634,7 +635,7 @@ class EthnoUpload{
         }
 		return $fieldArr;
 	}
-	
+
 	private function getUploadSynopticFieldArr(){
 		//Get metadata
 		$targetArr = array();
@@ -647,7 +648,7 @@ class EthnoUpload{
 			}
 		}
 		$rs->free();
-		
+
 		return $targetArr;
 	}
 
@@ -666,7 +667,7 @@ class EthnoUpload{
 
         return $targetArr;
     }
-	
+
 	//Setters and getters
 	private function setUploadTargetPath(){
 		$tPath = $GLOBALS['tempDirRoot'];
@@ -686,7 +687,7 @@ class EthnoUpload{
 		if(substr($tPath,-1) !== '/') {
 			$tPath .= '/';
 		}
-		$this->uploadTargetPath = $tPath; 
+		$this->uploadTargetPath = $tPath;
 	}
 
 	public function setFileName($fName){
@@ -700,11 +701,11 @@ class EthnoUpload{
 	public function getFileName(){
 		return $this->uploadFileName;
 	}
-	
+
 	public function getStatArr(){
 		return $this->statArr;
 	}
-	
+
 	public function getErrorStr(){
 		return $this->errorStr;
 	}
@@ -750,7 +751,7 @@ class EthnoUpload{
 		$newStr = $this->conn->real_escape_string($newStr);
 		return $newStr;
 	}
-	
+
 	private function encodeArr(&$inArr){
 		foreach($inArr as $k => $v){
 			$inArr[$k] = htmlentities($v);
@@ -764,7 +765,7 @@ class EthnoUpload{
 		$search = array(chr(145),chr(146),chr(147),chr(148),chr(149),chr(150),chr(151));
 		$replace = array("'","'",'"','"','*','-','-');
 		$inStr= str_replace($search, $replace, $inStr);
-		//Get rid of UTF-8 curly smart quotes and dashes 
+		//Get rid of UTF-8 curly smart quotes and dashes
 		$badwordchars=array("\xe2\x80\x98", // left single quote
 							"\xe2\x80\x99", // right single quote
 							"\xe2\x80\x9c", // left double quote
@@ -774,7 +775,7 @@ class EthnoUpload{
 		);
 		$fixedwordchars=array("'", "'", '"', '"', '-', '...');
 		$inStr = str_replace($badwordchars, $fixedwordchars, $inStr);
-		
+
 		if($inStr){
 			$cs = strtolower($CHARSET);
 			if($cs === 'utf-8' || $cs === 'utf8'){
