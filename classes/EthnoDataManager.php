@@ -1029,14 +1029,14 @@ class EthnoDataManager {
 
     public function getTaxaLinkageArr($tid){
         $returnArr = array();
-        $sql = 'SELECT l.ethlinkid, l.ethnidlink, l.linktype, l.refpages, l.discussion, r.title, g.id, l.refid, '.
-            'g.iso639P3code, g.`name`, IFNULL(t.SciName,o.sciname) AS sciname, n.verbatimVernacularName, n.tid, o.tidinterpreted '.
-            'FROM ethnolinkages AS l LEFT JOIN ethnodata AS n ON l.ethdidlink = n.ethdid '.
-            'LEFT JOIN glottolog AS g ON n.langId = g.id '.
-            'LEFT JOIN taxa AS t ON n.tid = t.TID '.
-            'LEFT JOIN omoccurrences AS o ON n.occid = o.occid '.
-            'LEFT JOIN referenceobject AS r ON l.refid = r.refid '.
-            'WHERE n.tid = '.$tid.' OR o.tidinterpreted = '.$tid;
+        $sql = 'SELECT l.ethlinkid, l.ethnidlink, l.linktype, l.refpages, l.discussion, r.title, g.id, l.refid,
+            g.iso639P3code, g.`name`, IFNULL(t.SciName,o.sciname) AS sciname, n.verbatimVernacularName, n.tid, o.tidinterpreted
+            FROM ethnolinkages AS l LEFT JOIN ethnodata AS n ON l.ethdidlink = n.ethdid
+            LEFT JOIN glottolog AS g ON n.langId = g.id
+            LEFT JOIN taxa AS t ON n.tid = t.TID
+            LEFT JOIN omoccurrences AS o ON n.occid = o.occid
+            LEFT JOIN referenceobject AS r ON l.refid = r.refid
+            WHERE n.tid = '.$tid.' OR o.tidinterpreted = '.$tid;
         if($rs = $this->conn->query($sql)){
             while($row = $rs->fetch_object()){
                 $recId = $row->ethlinkid;
