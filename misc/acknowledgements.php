@@ -15,7 +15,7 @@ header('Content-Type: text/html; charset='.$CHARSET);
 	include($SERVER_ROOT.'/includes/header.php');
 	?>
 	<!-- This is inner text! -->
-	<div  id="innertext">
+	<div id="innertext">
 		<h1></h1>
 		<div style="padding: 0px 10px;">
 			<b>Development of the DEMCA data portal supported by:</b>

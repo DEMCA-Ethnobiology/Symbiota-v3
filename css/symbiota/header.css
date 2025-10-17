@@ -110,7 +110,7 @@ header a:hover {
 .menu-wrapper {
   position: sticky;
   z-index: 1;
-  background-color: var(--menu-top-bg-color);
+  background-image: var(--menu-top-bg-color);
   min-width: 0;
   text-align: center;
   width: 100%;
@@ -180,7 +180,7 @@ header a:hover {
 ul.menu,
 ul.menu ul {
   list-style: none;
-  padding: 0.25em 1em;
+  padding: 0;
   margin: 0;
 }
 
@@ -190,6 +190,12 @@ ul.menu ul {
   font-weight: 600;
   letter-spacing: 1px;
   text-align: left;
+  padding: 10px;
+  padding-bottom: 5px;  
+  margin-bottom: 5px;
+  background-image: url(../../images/css/images/menu-item_divider.jpg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
 }
 
 .menu label {
@@ -198,16 +204,13 @@ ul.menu ul {
 }
 
 .menu li {
-  padding: 10px 20px;
-}
-
-ul.menu > li > a {
-  text-align: left;
-}
-
-ul.menu > li {
+  padding: 0px;
   display: block;
-  padding: 0.25em;
+}
+
+.menu > li > a {
+  text-align: left;
+  padding: 0px 20px;
 }
 
 ul.menu > ul li{
@@ -265,7 +268,7 @@ ul.menu > ul li{
   nav.top-menu > ul > li:focus-within > ul {
     display: block;
     position: absolute;
-    background-color: var(--menu-top-bg-color);
+    background-color: #dcdcdc;
     box-shadow: 3px 3px 3px #000;
     width: max-content;
   }
@@ -277,14 +280,16 @@ ul.menu > ul li{
   nav.top-menu > ul ul > li:focus-within > ul {
     display: block;
     position:absolute;
-    background-color: var(--menu-top-bg-color);
+    background-color: #dcdcdc;
     box-shadow: 3px 3px 3px #000;
     width: max-content;
   }
   
   /* Change this in order to change the Dropdown symbol */
+  /* 
   nav.top-menu li > a:after { content:  ' +'; }
   nav.top-menu li > a:only-child:after { content: ''; }
+  */
 
   .header-wrapper > * {
     min-width: 0;
@@ -299,7 +304,7 @@ ul.menu > ul li{
       "top"
       "menu";
     grid-template-rows: auto fit-content(100%);
-    background-image: var(--header-bg-image);
+    background-image: url("../../images/layout/demcaheader.jpg");
     background-position: center;
     background-size: cover;
     min-width: 0;
@@ -308,16 +313,18 @@ ul.menu > ul li{
 
   .top-wrapper {
     background-color: var(--header-bg-color);
-    display: grid;
-    grid-template-areas: "brand login";
-    grid-template-columns: 3fr 1fr;
-    align-items: center;
     min-width: 0;
     width: 100%;
-    padding: 1rem 0;
+    height: 115px;
+    padding: 0;
+    background-color: #000;
+    background-image: url(../../images/layout/demcaheader.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .top-login {
+    float: right;
     display: grid;
     grid-template-columns: auto auto auto auto;
   }
@@ -344,8 +351,8 @@ ul.menu > ul li{
     max-height: none;
     position: relative;
     text-align: center;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
+    height: 34px;
+    padding-top: 4px;
   }
 
   ul.menu * {
@@ -354,15 +361,15 @@ ul.menu > ul li{
 
   ul.menu > li {
     display: inline-block;
-    padding: 0 10px;
+    padding: 0px;
   }
 
   ul.menu a {
-    padding: 0;
+    padding: 0px 20px;
   }
 
   #lang-select-li {
-    margin: 0;
+    margin: 0px 15px;
   }
 
 }

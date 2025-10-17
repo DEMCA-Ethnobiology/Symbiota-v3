@@ -15,7 +15,7 @@ header('Content-Type: text/html; charset='.$CHARSET);
 	include($SERVER_ROOT.'/includes/header.php');
 	?>
 	<!-- This is inner text! -->
-	<div  id="innertext">
+	<div id="innertext">
 		<h1></h1>
 		<b>About</b><br><br>
 

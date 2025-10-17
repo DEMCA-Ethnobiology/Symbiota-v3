@@ -12,7 +12,7 @@ header('Content-Type: text/html; charset=' . $CHARSET);
 	include_once($SERVER_ROOT . '/includes/googleanalytics.php');
 	?>
 	<link href="<?php echo $CSS_BASE_PATH; ?>/jquery-ui.css" type="text/css" rel="stylesheet">
-	<link href="<?php echo $CSS_BASE_PATH; ?>/quicksearch.css?ver=1" type="text/css" rel="Stylesheet" />
+	<link href="<?php echo $CSS_BASE_PATH; ?>/quicksearch.css?ver=1d" type="text/css" rel="Stylesheet" />
 	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
 	<script src="js/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
@@ -27,7 +27,6 @@ header('Content-Type: text/html; charset=' . $CHARSET);
 	<?php
 	include($SERVER_ROOT . '/includes/header.php');
 	?>
-	<div class="navpath"></div>
 	<div id="innertext">
 		<div id="quicksearchdiv">
 			<!-- -------------------------QUICK SEARCH SETTINGS--------------------------------------- -->
