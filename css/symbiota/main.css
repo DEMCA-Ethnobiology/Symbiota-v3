@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import "normalize.slim.css";
-@import "variables.css";
+@import "variables.css?var=1";
 
 
 /* Global styles
@@ -14,13 +14,10 @@ html {
 }
 
 body {
-  width: 80%;
   max-width: 1600px;
   background-color: var(--body-bg-color);
   color: var(--body-text-color);
   margin: 0;
-  margin-left: auto;
-  margin-right: auto;
   -webkit-text-size-adjust: 100%;
   font-size: var(--body-font-size, 1rem);
   font-weight: 400;
@@ -614,7 +611,10 @@ table.styledtable tr.alt td {
 /* Medium screens and up */
 @media (min-width: 768px) {
   body {
-    display: grid;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+	display: grid;
     grid-template-rows: auto auto 1fr auto; /* header, breadcrumbs, main, footer */
   }
 }
