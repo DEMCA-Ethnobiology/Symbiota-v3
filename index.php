@@ -1,20 +1,21 @@
 <?php
 include_once('config/symbini.php');
-if($LANG_TAG == 'en' || !file_exists($SERVER_ROOT.'/content/lang/index.'.$LANG_TAG.'.php')) include_once($SERVER_ROOT.'/content/lang/index.en.php');
+if($LANG_TAG == 'en' || !file_exists($SERVER_ROOT.'/content/lang/index.'.$LANG_TAG.'.php'))
+	include_once($SERVER_ROOT.'/content/lang/index.en.php');
 else include_once($SERVER_ROOT.'/content/lang/index.'.$LANG_TAG.'.php');
 header('Content-Type: text/html; charset=' . $CHARSET);
 ?>
 <html>
 <head>
-	<title><?php echo $DEFAULT_TITLE; ?> Home</title>
+	<title><?= $DEFAULT_TITLE; ?> Home</title>
 	<?php
 	include_once($SERVER_ROOT . '/includes/head.php');
 	include_once($SERVER_ROOT . '/includes/googleanalytics.php');
 	?>
-	<link href="<?php echo $CSS_BASE_PATH; ?>/jquery-ui.css" type="text/css" rel="stylesheet">
-	<link href="<?php echo $CSS_BASE_PATH; ?>/quicksearch.css?ver=1d" type="text/css" rel="Stylesheet" />
+	<link href="<?= $CSS_BASE_PATH; ?>/jquery-ui.css" type="text/css" rel="stylesheet">
+	<link href="<?= $CSS_BASE_PATH; ?>/quicksearch.css?ver=1d" type="text/css" rel="Stylesheet" />
 	<script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>
-	<script src="js/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+	<script src="js/jquery-ui.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		var clientRoot = "<?= $CLIENT_ROOT ?>";
 	</script>
@@ -30,10 +31,10 @@ header('Content-Type: text/html; charset=' . $CHARSET);
 	<div id="innertext">
 		<div id="quicksearchdiv">
 			<!-- -------------------------QUICK SEARCH SETTINGS--------------------------------------- -->
-			<form name="quicksearch" id="quicksearch" action="<?php echo $CLIENT_ROOT; ?>/taxa/index.php" method="get" onsubmit="return verifyQuickSearch(this);">
-				<div id="quicksearchtext" ><?php echo (isset($LANG['QSEARCH_SEARCH'])?$LANG['QSEARCH_SEARCH']:'Taxon Search'); ?></div>
+			<form name="quicksearch" id="quicksearch" action="<?= $CLIENT_ROOT; ?>/taxa/index.php" method="get" onsubmit="return verifyQuickSearch(this);">
+				<div id="quicksearchtext" ><?= $LANG['QSEARCH_SEARCH'] ?></div>
 				<input id="taxa" type="text" name="taxon" />
-				<button name="formsubmit"  id="quicksearchbutton" type="submit" value="Search Terms"><?php echo (isset($LANG['QSEARCH_SEARCH_BUTTON'])?$LANG['QSEARCH_SEARCH_BUTTON']:'Search'); ?></button>
+				<button name="formsubmit"  id="quicksearchbutton" type="submit" value="Search Terms"><?= $LANG['QSEARCH_SEARCH_BUTTON'] ?></button>
 			</form>
 		</div>
 		<?php
