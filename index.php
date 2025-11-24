@@ -13,10 +13,10 @@ header('Content-Type: text/html; charset=' . $CHARSET);
 	?>
 	<link href="<?php echo $CSS_BASE_PATH; ?>/jquery-ui.css" type="text/css" rel="stylesheet">
 	<link href="<?php echo $CSS_BASE_PATH; ?>/quicksearch.css?ver=1d" type="text/css" rel="Stylesheet" />
-	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>
 	<script src="js/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
-		var clientRoot = "<?php echo $CLIENT_ROOT; ?>";
+		var clientRoot = "<?= $CLIENT_ROOT ?>";
 	</script>
 	<script src="js/symb/api.taxonomy.taxasuggest.js" type="text/javascript"></script>
 	<style>

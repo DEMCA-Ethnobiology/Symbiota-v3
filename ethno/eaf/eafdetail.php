@@ -250,8 +250,8 @@ if($xml){
 		.divTableRow { display: table-row; }
 		.divTableCell { display: table-cell;}
 	</style>
-	<script src="../../js/jquery-3.2.1.min.js" type="text/javascript"></script>
-	<script src="../../js/jquery-ui-1.12.1/jquery-ui.js" type="text/javascript"></script>
+	<script src="../../js/jquery-3.7.1.min.js" type="text/javascript"></script>
+	<script src="../../js/jquery-ui.min.js" type="text/javascript"></script>
 	<script src="../../js/symb/shared.js?ver=131106" type="text/javascript"></script>
 	<script src="../../js/jscolor/jscolor.js?ver=4" type="text/javascript"></script>
 	<script type="text/javascript">
