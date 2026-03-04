@@ -1,34 +1,29 @@
 <?php
-include_once("config/symbini.php");
-header("Content-Type: text/html; charset=".$CHARSET);
+include_once('../config/symbini.php');
+header('Content-Type: text/html; charset='.$CHARSET);
 ?>
 <html>
 <head>
-	<meta http-equiv="X-Frame-Options" content="deny">
 	<title><?php echo $DEFAULT_TITLE; ?> Home</title>
-	<link href="css/base.css?<?php echo $CSS_VERSION; ?>" type="text/css" rel="stylesheet" />
-	<link href="css/main.css?<?php echo $CSS_VERSION; ?>" type="text/css" rel="stylesheet" />
-	<script type="text/javascript">
-		<?php include_once($SERVER_ROOT.'/config/googleanalytics.php'); ?>
-	</script>
+	<?php
+	include_once($SERVER_ROOT.'/includes/head.php');
+	include_once($SERVER_ROOT.'/includes/googleanalytics.php');
+	?>
 </head>
 <body>
 	<?php
-	include($SERVER_ROOT.'/header.php');
-	?> 
+	include($SERVER_ROOT.'/includes/header.php');
+	?>
 	<!-- This is inner text! -->
-	<div  id="innertext">
+	<div id="innertext">
 		<h1></h1>
+		<b>About</b><br><br>
 
-		
-			<b>About</b><br><br>
-			
-			Under development, text forthcoming
-		</div>
+		Under development, text forthcoming
 	</div>
 
 	<?php
-	include($SERVER_ROOT.'/footer.php');
-	?> 
+	include($SERVER_ROOT.'/includes/footer.php');
+	?>
 </body>
 </html>

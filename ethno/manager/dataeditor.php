@@ -99,8 +99,8 @@ if($dataArr["occid"]){
 	?>
 	<link href="<?php echo $CSS_BASE_PATH; ?>/jquery-ui.css" type="text/css" rel="stylesheet">
 	<style type="text/css"></style>
-	<script src="../../js/jquery-3.2.1.min.js" type="text/javascript"></script>
-	<script src="../../js/jquery-ui-1.12.1/jquery-ui.js" type="text/javascript"></script>
+	<script src="../../js/jquery-3.7.1.min.js" type="text/javascript"></script>
+	<script src="../../js/jquery-ui.min.js" type="text/javascript"></script>
 	<script src="../../js/symb/shared.js?ver=131106" type="text/javascript"></script>
 	<script type="text/javascript">
 		var partsUsedTidArr = JSON.parse('<?php echo json_encode($partsUsedTidArr); ?>');
