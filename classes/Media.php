@@ -226,12 +226,12 @@ class Media {
 			return is_array($mime) && count($mime) > 0? $mime[0]: $mime;
 		} else if(is_array($mime)) {
 			foreach($mime as $type) {
-				if(in_array($type, $GLOBALS['ALLOWED_MEDIA_MIME_TYPES'])) {
+				if(UploadUtil::mimeAllowed($type, $GLOBALS['ALLOWED_MEDIA_MIME_TYPES'])) {
 					return $type;
 				}
 			}
 		} else {
-			if(in_array($mime, $GLOBALS['ALLOWED_MEDIA_MIME_TYPES'])) {
+			if(UploadUtil::mimeAllowed($mime, $GLOBALS['ALLOWED_MEDIA_MIME_TYPES'])) {
 				return $mime;
 			}
 		}
@@ -244,6 +244,9 @@ class Media {
 	 * @return string | bool
 	 */
 	public static function ext2Mime(string $ext, string $type = '') {
+		$ext = strtolower($ext);
+		$type = strtolower($type);
+
 		$image = [
 			'bmp' => ['image/bmp', 'image/x-bmp', 'image/x-bitmap', 'image/x-xbitmap', 'image/x-win-bitmap', 'image/x-windows-bmp', 'image/ms-bmp', 'image/x-ms-bmp'],
 			'cdr' => ['image/cdr', 'image/x-cdr'],
@@ -511,7 +514,7 @@ class Media {
 			if(self::isValidFile($file)) {
 				$pathInfo =	pathinfo($file['name']);
 				$pathInfo['filename'] = self::cleanFileName($pathInfo['filename']);
-				$file['name'] = $pathInfo['filename'] . '.' . $pathInfo['extension'];
+				$file['name'] = $pathInfo['filename'] . '.' . ($pathInfo['extension'] ?? '');
 				$file['full_path'] = $file['name'];
 			} else if($post_arr['copytoserver'] ?? false) {
 				$file = UploadUtil::downloadFromRemote($post_arr['originalUrl'], $GLOBALS['ALLOWED_MEDIA_MIME_TYPES']);
@@ -526,6 +529,11 @@ class Media {
 				if(!isset($post_arr['sourceIdentifier'])) {
 					$post_arr['sourceIdentifier'] = 'filename: ' . $file['name'];
 				}
+			}
+			else{
+				UploadUtil::validateFileError($file);
+				if (empty($post_arr['originalUrl']))
+        			throw new MediaException(MediaException::NoFileUploaded);
 			}
 
 			$media_metadata = self::insert($post_arr, $conn);
@@ -616,7 +624,9 @@ class Media {
 			}
 
 			foreach($createdFilepaths as $field => $filepath) {
-				self::insertMediaMetadata($media_metadata['mediaID'], $field, filesize($filepath), md5_file($filepath));
+				if(file_exists($filepath)) {
+					self::insertMediaMetadata($media_metadata['mediaID'], $field, filesize($filepath), md5_file($filepath));
+				}
 			}
 
 			mysqli_commit($conn);
